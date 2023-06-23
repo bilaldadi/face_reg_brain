@@ -16,7 +16,7 @@ class App extends Component {
     <Logo/>
     <Rank/>
     <ImageLinkForm/>
-    
+   
     </div>
   );
   }
