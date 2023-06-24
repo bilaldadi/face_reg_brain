@@ -2,7 +2,7 @@ import React from "react";
 import './ImageLinkForm.css';
 import Button from '@mui/material/Button';
 
-const ImageLinkForm = () => {
+const ImageLinkForm = ({onInputChange , onButtonSubmit}) => {
     return (
         <div>
             <p style={{color: "white"}} className="f3">
@@ -10,9 +10,9 @@ const ImageLinkForm = () => {
             </p>
             <div className="center">
                 <div className="form center pa4 br3 shadow-5">
-                    <input className="f4 pa2 w-70 center" type="text"/>
-                    <Button className="w-30 grow f4  ph3 pv2 dib white bg-light-purple" variant="contained">Detect</Button>
-                    
+                    <input className="f4 pa2 w-70 center" type="text" onChange={onInputChange}/>
+                    <Button className="w-30 grow f4  ph3 pv2 dib white bg-light-purple" variant="contained" onClick={onButtonSubmit}>Detect</Button>
+
                 </div>
             </div>
         </div>
