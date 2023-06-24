@@ -10,7 +10,7 @@ const FaceRecognition = ({imgUrl , Agedata , Genderdata , Ethnicitydata , box}) 
                 <div className="bounding-box" style={{top: box.topRow , right: box.rightCol , bottom: box.bottomRow , left: box.leftCol}}></div>
             </div>
 
-            <div className="fr tc shadow-5 mt6 mr7"> 
+            <div className="fr tc shadow-5 mt4 mr7"> 
                 <h3>Details will be shown here</h3>
                 <h3>----------------------------</h3>
                 <h4>Age Range : {Agedata} </h4>
