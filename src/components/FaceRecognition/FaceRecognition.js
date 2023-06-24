@@ -1,18 +1,23 @@
 import React from "react";
+import './FaceRe.css';
 
-const FaceRecognition = ({imgUrl , Agedata , Genderdata , Ethnicitydata}) => {
+const FaceRecognition = ({imgUrl , Agedata , Genderdata , Ethnicitydata , box}) => {
     return (
-        <div className="center ma cf">
-            <div className=" fl w70 tc fl w-50 tc ma4 ">
-                <img src= {imgUrl} alt="" width="500px" height="auto"/>
+        <div className="ma cf ">
+
+            <div className=" fl tc absolute mt3 ml7">
+                <img id="inputimage" src= {imgUrl} alt="" width="500px" height="auto"/>
+                <div className="bounding-box" style={{top: box.topRow , right: box.rightCol , bottom: box.bottomRow , left: box.leftCol}}></div>
             </div>
-            <div className=" fl w-30 tc shadow-5 ma4"> 
-                <h3>Deatails will be shown here</h3>
+
+            <div className="fr tc shadow-5 mt6 mr7"> 
+                <h3>Details will be shown here</h3>
                 <h3>----------------------------</h3>
                 <h4>Age Range : {Agedata} </h4>
                 <h4>Gender : {Genderdata}</h4>
                 <h4>Ethnicity : {Ethnicitydata} </h4>
             </div> 
+
         </div>
     );
 }
